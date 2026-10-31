@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/swc-wasm-nodejs": "^16.4.3",
+    "@vercel/analytics": "^2.0.1",
     "canvas-confetti": "^1.9.4",
     "framer-motion": "^14.9.0",
     "lucide-react": "^1.66.0",
