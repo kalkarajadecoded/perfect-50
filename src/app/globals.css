@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+:root {
+  --background: #09090b;
+  --card-bg: #18181b;
+  --card-border: #27272a;
+  --primary-accent: #a855f7;
+  --secondary-accent: #3b82f6;
+  --success-accent: #a3e635;
+  --text-main: #fafafa;
+}
+
+body {
+  background-color: #09090b;
+  color: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  overflow-x: hidden;
+}
+
+/* Card subtle purple glow */
+.card-glow {
+  box-shadow: 0 0 50px -10px rgba(168, 85, 247, 0.15), 0 20px 40px -15px rgba(0, 0, 0, 0.7);
+}
+
+.button-glow {
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.4), 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.button-glow:hover {
+  box-shadow: 0 0 35px rgba(168, 85, 247, 0.6), 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.progress-glow {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.45);
+}
+
+/* Micro screen shake on freeze impact */
+@keyframes microShake {
+  0% { transform: translate(0, 0) scale(1); }
+  20% { transform: translate(-3px, 2px) scale(1.002); }
+  40% { transform: translate(3px, -2px) scale(0.998); }
+  60% { transform: translate(-2px, -1px) scale(1.001); }
+  80% { transform: translate(2px, 1px) scale(1); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.animate-micro-shake {
+  animation: microShake 0.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+/* Shockwave ripple */
+@keyframes shockwave {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+.animate-shockwave {
+  animation: shockwave 0.55s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+}
+
+/* Pulsing mystery numbers */
+@keyframes mysteryPulse {
+  0%, 100% { opacity: 0.9; text-shadow: 0 0 25px rgba(168, 85, 247, 0.8); }
+  50% { opacity: 0.35; text-shadow: 0 0 8px rgba(168, 85, 247, 0.3); }
+}
+
+.animate-mystery {
+  animation: mysteryPulse 0.85s ease-in-out infinite;
+}
+
+/* Grid background pattern */
+.bg-grid-subtle {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+}
